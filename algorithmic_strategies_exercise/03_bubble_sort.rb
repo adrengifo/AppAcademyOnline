@@ -2,6 +2,7 @@
 # The bubble_sort method should accept an array of numbers and arrange the elements in increasing order.
 # The method should return the array.
 # Do not use the built-in Array#sort
+<<<<<<< HEAD
 def bubble_sort (arr)
     sorted = false
     while !sorted
@@ -15,6 +16,8 @@ def bubble_sort (arr)
     end
     return arr
 end
+=======
+>>>>>>> 37ef753f88918ce7fb0b2944c67e435d429ca519
 
 
 p bubble_sort([2, 8, 5, 2, 6])      # => [2, 2, 5, 6, 8]

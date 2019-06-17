@@ -2,6 +2,7 @@
 # The method should return an array containing all of "peaks" of the array.
 # An element is considered a "peak" if it is greater than both it's left and right neighbor.
 # The first or last element of the array is considered a "peak" if it is greater than it's one neighbor.
+<<<<<<< HEAD
 def peak_finder (arr)
     peaks = []
 
@@ -20,6 +21,8 @@ def peak_finder (arr)
     
    return peaks
 end
+=======
+>>>>>>> 37ef753f88918ce7fb0b2944c67e435d429ca519
 
 
 p peak_finder([1, 3, 5, 4])         # => [5]
