@@ -1,13 +1,7 @@
 # Write a method, union, that accepts any number of arrays as arguments.
 # The method should return an array containing all elements of the given arrays.
 def union (*others)
-    arr1 = []
-    others.each do |ele|
-        ele.each do |e|
-             arr1<< e
-        end
-    end
-    return arr1
+    return others.inject { |acc, el| acc + el}
 end
 
 # p union(['a','b'], [1,2,3])
