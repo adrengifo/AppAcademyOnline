@@ -3,12 +3,7 @@
 # The method should return false otherwise.
 
 def adult_in_group? (arr)
-    arr.each do |hash1|
-        if hash1[:age] >= 18
-            return true
-        end
-    end
-    return false
+    return arr.any? { |hash1| hash1[:age] >= 18}
 end
 
 
