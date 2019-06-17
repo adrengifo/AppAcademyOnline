@@ -1,7 +1,9 @@
 # Write a method, multi_dimensional_sum(array), that accepts a multidimensional array as an arg 
 # and returns the sum of all numbers in the array.
+
 def multi_dimensional_sum (array)
-    p *array
+    arr = array.flatten()
+    return arr.inject { |arr, ele| arr + ele}
 end
 
 
@@ -19,4 +21,4 @@ arr_2 = [
     [ [5, 2], 1 ]
 ]
 
-# p multi_dimensional_sum(arr_2)    # => 24
+multi_dimensional_sum(arr_2)    # => 24
