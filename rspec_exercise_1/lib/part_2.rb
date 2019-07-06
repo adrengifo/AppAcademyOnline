@@ -28,9 +28,7 @@ def caesar_cipher(message, num1)
         if alphabet.include? (char)
             old_index = alphabet.find_index(char)
             newIndex = old_index + num1
-            if newIndex > 25
-                newIndex = (newIndex % 26)
-            end
+            newIndex = (newIndex % 26)
             newMessage += alphabet[newIndex]
         else
             newMessage += char
