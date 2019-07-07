@@ -4,12 +4,10 @@
 require "byebug"
 def largest_prime_factor(num)
     largestFactor = 0
-    (1..num).each do |factor|
+    (2..num).each do |factor|
         # debugger
-        if num % factor == 0
-            if is_prime(factor) && largestFactor < factor
-                largestFactor = factor
-            end
+        if num % factor == 0 && is_prime(factor) && largestFactor < factor
+            largestFactor = factor
         end
     end
     return largestFactor
