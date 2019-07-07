@@ -16,15 +16,8 @@ def largest_prime_factor(num)
 end
 
 def is_prime(num)
-    if num < 2 
-        return false
-    end
-    (2...num).each do |factor|
-        if num % factor == 0
-            return false
-        end
-    end
-    return true
+    return false if num < 2 
+    (2...num).none? {|factor| num % factor == 0}
 end
 
 def unique_chars? (string1)
