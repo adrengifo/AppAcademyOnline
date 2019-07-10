@@ -37,6 +37,6 @@ class Dog
     end
 
     def favorite_food? (str)
-        @favorite_foods.include?(str.capitalize)
+        @favorite_foods.map(&:upcase).include?(str.upcase)
     end
 end
