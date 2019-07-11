@@ -60,7 +60,6 @@ class Bootcamp
 
   def average_grade (student)
     if @students.include?(student) && @grades[student].length > 0
-      total = 0
       return ((@grades[student]).inject {|acc,el| acc+el}) / @grades[student].length
     else
       return nil
