@@ -23,7 +23,7 @@ class Startup
             @employees << Employee.new(employee_name, title)
             return true
         else 
-            raise 
+            raise "Invalid title"
         end
     end
 
@@ -38,7 +38,7 @@ class Startup
             employee_inst.pay(pay)
             @funding -= pay
         else
-            raise
+            raise "not enough funding"
         end
     end
 
