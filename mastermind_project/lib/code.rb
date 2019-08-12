@@ -12,7 +12,7 @@ class Code
 
   def initialize (peg_array)
     if Code.valid_pegs?(peg_array)
-      @pegs = peg_array.map {|peg| peg.upcase}
+      @pegs = peg_array.map(&:upcase)
     else 
       raise "Not valid peg"
     end
@@ -37,9 +37,7 @@ class Code
   def num_exact_matches(code_inst)
     correct = 0
     code_inst.pegs.each_with_index do |peg,idx|
-      if code_inst[idx] == @pegs[idx]
-        correct += 1
-      end
+      correct += 1 if  code_inst[idx] == @pegs[idx]
     end
     return correct
   end
